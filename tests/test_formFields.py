@@ -1,8 +1,8 @@
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
 from pages.formFields import FormFields
+import pytest
 
 
+@pytest.mark.regress
 def test_text_fields(browser):
     page = FormFields(browser)
     page.open()
