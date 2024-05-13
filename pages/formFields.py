@@ -23,7 +23,7 @@ class FormFields(BasePage):
         return self.find(Locators.TEXT_FIELD_SELECTOR)
 
     def button_submit_click(self):
-        self.find(Locators.BUTTON_SUBMIT_SELECTOR).click()
+        self.find(Locators.BUTTON_SUBMIT_SELECTOR, time=20).click()
 
     def text_field_value(self, word):
         self.text_field.send_keys(word)
