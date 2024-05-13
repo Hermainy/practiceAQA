@@ -11,6 +11,6 @@ import pytest
 def browser():
     options = Options()
     options.add_argument('--headless')
-    service = Service(ChromeDriverManager(driver_version="124.0.6367.202").install(), chrome_options=options)
-    chrome_browser = webdriver.Chrome(service=service)
+    service = Service(ChromeDriverManager(driver_version="124.0.6367.202").install())
+    chrome_browser = webdriver.Chrome(service=service, options=options)
     return chrome_browser
