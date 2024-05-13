@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 class Locators:
-    BUTTON_SUBMIT_SELECTOR = (By.CSS_SELECTOR, '#submit-btn')
+    BUTTON_SUBMIT_SELECTOR = (By.XPATH, '//*[@id="submit-btn"]')
     TEXT_FIELD_SELECTOR = (By.CSS_SELECTOR, '#name')
 
 
@@ -23,7 +23,7 @@ class FormFields(BasePage):
         return self.find(Locators.TEXT_FIELD_SELECTOR)
 
     def button_submit_click(self):
-        self.find(Locators.BUTTON_SUBMIT_SELECTOR, time=20).click()
+        self.find(Locators.BUTTON_SUBMIT_SELECTOR, time=10).click()
 
     def text_field_value(self, word):
         self.text_field.send_keys(word)

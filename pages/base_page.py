@@ -7,5 +7,5 @@ class BasePage:
         self.browser = browser
 
     def find(self, args, time=10):
-        return WebDriverWait(self.browser, time).until(EC.presence_of_element_located(args),
+        return WebDriverWait(self.browser, time).until(EC.element_to_be_clickable(args),
                                                        message=f"Can't find element by locator {args}")
