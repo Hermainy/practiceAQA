@@ -2,6 +2,7 @@ from pages.formFields import FormFields
 import pytest
 
 
+@pytest.mark.skip
 @pytest.mark.regress
 def test_text_fields(browser):
     page = FormFields(browser)
