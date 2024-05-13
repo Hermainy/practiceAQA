@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 
 class Locators:
@@ -31,3 +32,10 @@ class FormFields(BasePage):
     @property
     def alert_text(self):
         return self.browser.switch_to.alert.text
+
+    @property
+    def alert_not_displayed(self):
+        return self.not_alert_present()
+
+    def submit_by_enter(self):
+        self.browser.send_keys(Keys.ENTER)

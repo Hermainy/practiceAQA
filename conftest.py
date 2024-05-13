@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 import pytest
 
 
-@pytest.fixture()
+@pytest.fixture
 def browser():
     options = Options()
     options.add_argument('--window-size=1920,1080')
