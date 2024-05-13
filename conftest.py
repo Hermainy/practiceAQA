@@ -11,7 +11,9 @@ import pytest
 def browser():
     options = Options()
     options.add_argument('--headless')
+    options.add_argument('window-size=1920x1080')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     service = Service(ChromeDriverManager(driver_version="124.0.6367.202").install())
     chrome_browser = webdriver.Chrome(service=service, options=options)
-    chrome_browser.maximize_window()
     return chrome_browser
