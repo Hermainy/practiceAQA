@@ -3,6 +3,7 @@ import pytest
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields(browser):
     page = FormFields(browser)
     page.open()
@@ -12,6 +13,7 @@ def test_text_fields(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_min(browser):
     page = FormFields(browser)
     page.open()
@@ -21,6 +23,7 @@ def test_text_fields_min(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_empty(browser):
     page = FormFields(browser)
     page.open()
@@ -30,6 +33,7 @@ def test_text_fields_empty(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_numbers(browser):
     page = FormFields(browser)
     page.open()
@@ -39,6 +43,7 @@ def test_text_fields_numbers(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_numbers_min(browser):
     page = FormFields(browser)
     page.open()
@@ -48,6 +53,7 @@ def test_text_fields_numbers_min(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_symbols(browser):
     page = FormFields(browser)
     page.open()
@@ -57,6 +63,7 @@ def test_text_fields_symbols(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_space_begin(browser):
     page = FormFields(browser)
     page.open()
@@ -66,6 +73,7 @@ def test_text_fields_space_begin(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_space_middle(browser):
     page = FormFields(browser)
     page.open()
@@ -75,6 +83,7 @@ def test_text_fields_space_middle(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_space_end(browser):
     page = FormFields(browser)
     page.open()
@@ -84,6 +93,7 @@ def test_text_fields_space_end(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_enter_keys(browser):
     page = FormFields(browser)
     page.open()
@@ -92,6 +102,7 @@ def test_text_fields_enter_keys(browser):
 
 
 @pytest.mark.xfail
+@pytest.mark.regress
 def test_text_fields_space_only(browser):
     page = FormFields(browser)
     page.open()
