@@ -94,7 +94,6 @@ def test_text_fields_space_end(browser):
     assert page.alert_text == 'Message received!'
 
 
-@pytest.mark.xfail
 @pytest.mark.regress
 def test_text_fields_enter_keys(browser):
     page = FormFields(browser)
@@ -103,7 +102,6 @@ def test_text_fields_enter_keys(browser):
     assert page.alert_text == 'Message received!'
 
 
-@pytest.mark.xfail
 @pytest.mark.regress
 def test_text_fields_space_only(browser):
     page = FormFields(browser)
@@ -112,6 +110,7 @@ def test_text_fields_space_only(browser):
     assert page.alert_text == 'Message received!'
 
 
+@pytest.mark.regress
 def test_checkbox_Water(browser):
     page = FormFields(browser)
     page.open()
@@ -119,6 +118,7 @@ def test_checkbox_Water(browser):
     assert page.checkbox_value('Water')
 
 
+@pytest.mark.regress
 def test_checkbox_Milk(browser):
     page = FormFields(browser)
     page.open()
@@ -126,6 +126,7 @@ def test_checkbox_Milk(browser):
     assert page.checkbox_value('Milk')
 
 
+@pytest.mark.regress
 def test_checkbox_Coffee(browser):
     page = FormFields(browser)
     page.open()
@@ -133,6 +134,7 @@ def test_checkbox_Coffee(browser):
     assert page.checkbox_value('Coffee')
 
 
+@pytest.mark.regress
 def test_checkbox_Wine(browser):
     page = FormFields(browser)
     page.open()
@@ -140,6 +142,7 @@ def test_checkbox_Wine(browser):
     assert page.checkbox_value('Wine')
 
 
+@pytest.mark.regress
 def test_checkbox_Ctrl_Alt_Delight(browser):
     page = FormFields(browser)
     page.open()
@@ -147,6 +150,7 @@ def test_checkbox_Ctrl_Alt_Delight(browser):
     assert page.checkbox_value('Ctrl_Alt_Delight')
 
 
+@pytest.mark.regress
 def test_all_checkboxes(browser):
     page = FormFields(browser)
     page.open()
