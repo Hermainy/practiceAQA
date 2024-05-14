@@ -1,3 +1,5 @@
+import time
+
 from pages.formFields import FormFields
 import pytest
 
@@ -108,3 +110,45 @@ def test_text_fields_space_only(browser):
     page.open()
     page.text_field_value(' ' + '\n')
     assert page.alert_text == 'Message received!'
+
+
+def test_checkbox_Water(browser):
+    page = FormFields(browser)
+    page.open()
+    page.check_checkbox('Water')
+    assert page.checkbox_value('Water')
+
+
+def test_checkbox_Milk(browser):
+    page = FormFields(browser)
+    page.open()
+    page.check_checkbox('Milk')
+    assert page.checkbox_value('Milk')
+
+
+def test_checkbox_Coffee(browser):
+    page = FormFields(browser)
+    page.open()
+    page.check_checkbox('Coffee')
+    assert page.checkbox_value('Coffee')
+
+
+def test_checkbox_Wine(browser):
+    page = FormFields(browser)
+    page.open()
+    page.check_checkbox('Wine')
+    assert page.checkbox_value('Wine')
+
+
+def test_checkbox_Ctrl_Alt_Delight(browser):
+    page = FormFields(browser)
+    page.open()
+    page.check_checkbox('Ctrl_Alt_Delight')
+    assert page.checkbox_value('Ctrl_Alt_Delight')
+
+
+def test_all_checkboxes(browser):
+    page = FormFields(browser)
+    page.open()
+    page.check_all_checkboxes()
+    assert page.all_checkbox_value() == True

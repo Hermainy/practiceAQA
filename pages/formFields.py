@@ -4,8 +4,13 @@ from selenium.webdriver.common.keys import Keys
 
 
 class Locators:
-    BUTTON_SUBMIT_SELECTOR = (By.XPATH, '//*[@id="submit-btn"]')
-    TEXT_FIELD_SELECTOR = (By.CSS_SELECTOR, '#name')
+    BUTTON_SUBMIT_SELECTOR = (By.ID, 'submit-btn')
+    TEXT_FIELD_SELECTOR = (By.ID, 'name')
+
+    def DRINK_SELECTOR(self, option):
+        return By.XPATH, "//input[@value='" + option + "']"
+
+    ALL_CHECKBOXES_SELECTOR = (By.CSS_SELECTOR, 'input[type="checkbox"]')
 
 
 class FormFields(BasePage):
@@ -39,3 +44,18 @@ class FormFields(BasePage):
 
     def submit_by_enter(self):
         self.browser.send_keys(Keys.ENTER)
+
+    def check_checkbox(self, option):
+        self.find(Locators.DRINK_SELECTOR(self.browser, option)).click()
+
+    def checkbox_value(self, option):
+        return self.find(Locators.DRINK_SELECTOR(self.browser, option)).is_selected()
+
+    def check_all_checkboxes(self):
+        all_list = self.finds(Locators.ALL_CHECKBOXES_SELECTOR)
+        for element in all_list:
+            element.click()
+
+    def all_checkbox_value(self) -> bool:
+        all_list = self.finds(Locators.ALL_CHECKBOXES_SELECTOR)
+        return all([element.is_selected() for element in all_list])
