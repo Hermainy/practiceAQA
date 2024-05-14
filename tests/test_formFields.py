@@ -146,8 +146,8 @@ def test_checkbox_Wine(browser):
 def test_checkbox_Ctrl_Alt_Delight(browser):
     page = FormFields(browser)
     page.open()
-    page.check_checkbox('Ctrl_Alt_Delight')
-    assert page.checkbox_value('Ctrl_Alt_Delight')
+    page.check_checkbox('Ctrl-Alt-Delight')
+    assert page.checkbox_value('Ctrl-Alt-Delight')
 
 
 @pytest.mark.regress
